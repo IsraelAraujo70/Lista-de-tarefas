@@ -31,4 +31,9 @@ $(document).ready(function(){
         e.preventDefault();
         $(this).toggleClass("feito");
     });
+
+    $('ol').on('click', '.ellipsis', function (e) {
+        e.preventDefault();
+        $(this).toggleClass("feito");
+    });
 });

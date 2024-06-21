@@ -12,8 +12,19 @@ $(document).ready(function(){
         const newTaskDate = $('#date').val();
         const newTaskTime = $('#time').val();
         const newTask = $('<li></li>');
-        $(`<div class="item">${newTaskName} - ${newTaskDate} - ${newTaskTime}</div>`).appendTo(newTask);
+        let taskContent;
+        if (newTaskName.length > 20) {
+            taskContent = `<div class="item"><div class="ellipsis">${newTaskName}</div> - ${newTaskDate} - ${newTaskTime}</div>`;
+        } else {
+            taskContent = `<div class="item">${newTaskName} - ${newTaskDate} - ${newTaskTime}</div>`;
+        }
+        
+        $(taskContent).appendTo(newTask);
         $(newTask).appendTo('ol');
+        
+        $('#name').val('');
+        $('#date').val('');
+        $('#time').val('');
     });
     
     $('ol').on('click', '.item', function (e) {

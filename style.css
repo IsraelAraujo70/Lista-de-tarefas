@@ -150,3 +150,11 @@ form button:hover {
     background-color: #383535;
 }
 
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Ajuste conforme necessário */
+    display: inline-block;
+    vertical-align: middle;
+}

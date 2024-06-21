@@ -159,3 +159,8 @@ form button:hover {
     vertical-align: middle;
 }
 
+.item.feito .ellipsis,
+.item.feito {
+    text-decoration: line-through; /* Adiciona linha atravessada */
+}
+

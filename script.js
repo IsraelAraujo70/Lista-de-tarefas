@@ -30,10 +30,7 @@ $(document).ready(function(){
     $('ol').on('click', '.item', function (e) {
         e.preventDefault();
         $(this).toggleClass("feito");
+        
     });
 
-    $('ol').on('click', '.ellipsis', function (e) {
-        e.preventDefault();
-        $(this).toggleClass("feito");
-    });
 });

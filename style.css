@@ -1,0 +1,152 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+body {
+    background: linear-gradient(145deg, #1e1e1e, #2c2c2c, #1e1e1e); /*gradiente*/
+    background-size: 200% 200%;
+    animation: gradientAnimation 2s ease infinite;
+    color: aliceblue; 
+    padding-top: 20px; 
+    width: 100%;
+}
+
+@keyframes gradientAnimation { /*posição da animação*/
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+}
+
+.caixinha {
+    background-color: #222121;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.12); /* Sombra branca */
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+ol {
+    list-style: none; 
+    padding-left: 0;
+    text-align: center; 
+}
+
+li {
+    margin-bottom: 10px; 
+}
+
+.item {
+    background-color: #333; 
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+    width: 500px;
+}
+
+.feito {
+    text-decoration: line-through;
+    background-color: #292929; 
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos do formulário verticalmente */
+    width: 100%;
+    align-items: center;
+    display: none;
+}
+
+.inputs-container {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os inputs */
+    width: 100%;
+}
+
+form input {
+    flex: 1;
+    background-color: #312e2e;
+    color: aliceblue;
+    border: none;
+    border-radius: 3px;
+    padding: 12px; 
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    min-width: 0; /* Garante que os inputs não sejam maiores que o contêiner */
+}
+
+form input[type="date"],
+form input[type="time"] {
+    width: auto; /* Ajusta a largura para conteúdo dinâmico */
+    padding: 12px; 
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+}
+
+form button {
+    background-color: #312e2e;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px; /* Espaçamento acima do botão */
+    padding: 12px; 
+    cursor: pointer;
+    color: aliceblue;
+    font-weight: bold;
+    width: 100%;
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+}
+
+form input:focus {
+    outline: none; 
+    box-shadow: 0 0 4px aliceblue; 
+}
+
+form button:hover {
+    background-color: #383535;
+}
+
+.headerbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerbox button{
+    margin-left: 16px;
+    height: 30px;
+    width: 30px;
+    color: aliceblue;
+    background-color: #312e2e;
+    border: none;
+    border-radius: 200px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.headerbox button:hover {
+    background-color: #383535;
+}
+
